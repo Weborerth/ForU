@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЗаписОчка</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+
+  #heart {
+    cursor: pointer;
+    font-size: 50px;
+    color: red;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  #paper {
+    position: absolute;
+    top: calc(50% - 10px); 
+    left: 50%;
+    transform: translate(-50%, -50%) scaleY(0);
+    width: 400px;
+    height: 550px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+
+  #paper-content {
+    overflow: auto;
+    height: 100%;
+    text-align: justify;
+  }
+</style>
+</head>
+<body>
+
+<div id="heart">&#10084;</div>
+
+<div id="paper">
+  <div id="paper-content">
+    <h2>Я тебя очень сильно люблю</h2>
+    <p>Каждый день, каждый момент, я ощущаю, что моя душа наполняется бесконечной нежностью и теплом, когда я думаю о тебе котенок. Твоё имя звучит для меня как мелодия, которая наполняет моё сердце радостью и счастьем.
+
+        С момента, когда я встретил тебя, моя жизнь преобразилась. В твоём присутствии я чувствую себя сильным и уверенным, готовым преодолевать любые трудности и преграды. Каждый день я восхищаюсь твоей добротой, умом и красотой, которые заставляют моё сердце биться сильнее.
+        
+        Моя любовь к тебе, жопка ты вредная, непреодолима. Ты стала для меня не только любимым человеком, но и лучшим другом, союзником и партнером во всем. Мы пережили множество моментов счастья вместе, и я не могу представить свою жизнь без тебя.
+        
+        Каждый день я стремлюсь делать всё возможное, чтобы ты чувствовала себя счастливой и любимой. Твоя улыбка — моё самое большое сокровище, и я готов покорить весь мир, чтобы увидеть её сияющими глазами.
+        
+        Солнце мое, моя любовь к тебе безгранична и вечна. Ты — мой источник вдохновения, моя поддержка и моя радость. Я обещаю быть рядом с тобой во всех жизненных ситуациях и беречь нашу любовь каждый день. С тобой я чувствую себя целым и истинно счастливым. Люблю тебя до безумия!</p>
+  </div>
+</div>
+
+<script>
+  const heart = document.getElementById('heart');
+  const paper = document.getElementById('paper');
+
+  heart.addEventListener('click', function() {
+    heart.style.transform = 'translateY(300px)';
+    paper.style.transform = 'translate(-50%, -50%) scaleY(1)';
+    paper.style.opacity = '1';
+  });
+</script>
+
+</body>
+</html>
